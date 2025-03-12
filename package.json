@@ -18,7 +18,7 @@
     "debug": "babel-watch --inspect 0.0.0.0:9229 --extensions \".ts\" src/index.ts",
     "lint": "eslint --fix --ext .ts ./src",
     "format": "prettier --ignore-path .gitignore --write \"src/**/*.+(ts|json)\"",
-    "prepare": "husky instal && npm run buildl",
+    "prepare": "husky instal && npm run build",
     "release": "release-it"
   },
   "devDependencies": {
