@@ -7,9 +7,6 @@
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": [
-    "src/**/*"
-  ],
   "scripts": {
     "ts:type-check": "tsc --noEmit",
     "ts:type-check:watch": "npm run type-check -- --watch",
