@@ -202,7 +202,7 @@ export const LibreLinkUpClient = ({
     // @todo
   };
 
-  let averageInterval: NodeJS.Timer;
+  let averageInterval: NodeJS.Timeout;
   const readAveraged = async (
     amount: number,
     callback: (
