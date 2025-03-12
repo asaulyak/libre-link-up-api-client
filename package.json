@@ -10,7 +10,7 @@
   "scripts": {
     "ts:type-check": "tsc --noEmit",
     "ts:type-check:watch": "npm run type-check -- --watch",
-    "build": "tsc",
+    "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "start": "babel-watch --extensions \".ts\" src/index.ts",
@@ -19,7 +19,7 @@
     "lint": "eslint --fix --ext .ts ./src",
     "format": "prettier --ignore-path .gitignore --write \"src/**/*.+(ts|json)\"",
     "prepare": "husky install",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && npm run build:types",
     "release": "release-it"
   },
   "devDependencies": {
